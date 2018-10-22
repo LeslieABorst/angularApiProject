@@ -1,9 +1,16 @@
 "use strict";
 {
     angular.module('app')
-        .controller('SearchCritController', function(MyService, MyFactory) {
+        .controller('SearchCritController', function(MyService) {
             const $ctrl = this;
-            $ctrl.text = MyService.testProperty;
-            $ctrl.factoryText = MyFactory.testProperty;
+            $ctrl.movies = MyService.movieList;
+
+            $ctrl.onInputChange = function(){
+                MyService.getData($ctrl.searchMovie).then(function(data){
+                    $ctrl.movies = data;
+                }).catch(function(err){
+                    //error
+                })
+            }
         });
 }
