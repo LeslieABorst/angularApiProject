@@ -3,7 +3,6 @@
     angular.module('app')
         .factory('MyFactory', function() {
             return {
-
             }
         });
 }
