@@ -1,5 +1,69 @@
 <div>
-    <h1>Star Wars</h1>
-    <h2>{{$ctrl.text}}</h2>
-    <h3>{{$ctrl.factoryText}}</h3>
+    <input type="text" placeholder="Search for any movie..." ng-model="$ctrl.searchMovie" ng-change="$ctrl.onInputChange()">
+</div>
+
+<div>
+    <h2>Filters</h2>
+    <div>
+        <h3>Genre</h3><input type="checkbox" ng-model="genre">
+        <select multiple size="19">
+            <option ng-model="action">action</option>
+            <option ng-model="adventure">adventure</option>
+            <option ng-model="animation">animation</option>
+            <option ng-model="comedy">comedy</option>
+            <option ng-model="crime">crime</option>
+            <option ng-model="documentary">documentary</option>
+            <option ng-model="drama">drama</option>
+            <option ng-model="family">family</option>
+            <option ng-model="fantasy">fantasy</option>
+            <option ng-model="histroy">history</option>
+            <option ng-model="horror">horror</option>
+            <option ng-model="music">music</option>
+            <option ng-model="mystery">mystery</option>
+            <option ng-model="romance">romance</option>
+            <option ng-model="scifi">scifi</option>
+            <option ng-model="tv">tv movie</option>
+            <option ng-model="thriller">thriller</option>
+            <option ng-model="war">war</option>
+            <option ng-model="western">western</option>
+        </select>
+    </div>
+    <div>
+        <h3>Rating</h3>
+        <lable>10</lable><input type="checkbox" ng-model="10">
+        <lable>9</lable><input type="checkbox" ng-model="9">
+        <lable>8</lable><input type="checkbox" ng-model="8">
+        <lable>7</lable><input type="checkbox" ng-model="7">
+        <lable>6</lable><input type="checkbox" ng-model="6">
+        <lable>5</lable><input type="checkbox" ng-model="5">
+        <lable>4</lable><input type="checkbox" ng-model="4">
+        <lable>3</lable><input type="checkbox" ng-model="3">
+        <lable>2</lable><input type="checkbox" ng-model="2">
+        <lable>1 and below</lable><input type="checkbox" ng-model="1">
+    </div>
+    <div>
+        <h3>Run Time</h3>
+        <lable>0 - 60 min</lable><input type="radio">
+        <lable>61 - 120</lable><input type="radio">
+        <lable>121 - 180</lable><input type="radio">
+        <lable>181 +</lable><input type="radio">
+    </div>
+</div>
+
+<div>
+    <ul ng-repeat="movie in $ctrl.movies">
+        <li><img src="http://image.tmdb.org/t/p/w154/{{movie.poster_path}}"></li>
+        <li>
+            {{movie.original_title}}
+        </li>
+        <li>
+            Rating: {{movie.vote_average}} out of 10
+        </li>
+        <li>
+            Overview: {{movie.overview}}
+        </li>
+        <li>
+            Release Date: {{movie.release_date}}
+        </li>
+    </ul>
 </div>
