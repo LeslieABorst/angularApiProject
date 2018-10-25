@@ -19,16 +19,25 @@
                     return service.movieList;
                 }
             });
-        }
-
-        $http.get('https://api.themoviedb.org/3/genre/movie/list?api_key=4c7aca0b1e535586399a350d383ae387&language=en-US')
-            .then(function(response) {
-                service.genreList = response.data.results;
-                return service.genreList;
-                console.log(service.genreList);
-            });
-            
         
+        }
+        service.getGenre = function() {
+
+            return $http.get("https://api.themoviedb.org/3/genre/movie/list?api_key=4c7aca0b1e535586399a350d383ae387&language=en-US")
+                .then(function (response) {
+                    if(!response) {
+                        Promise.reject('failed');
+                    }
+                    else {
+                        service.genreList = response.data.genres;
+                        // console.log(service.genreList);
+                        return service.genreList;
+                    }
+                });    
+            
+
+    }
+    
 
     });
 }

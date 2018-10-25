@@ -5,30 +5,13 @@
 <div>
     <h2>Filters</h2>
     <div>
-        <h3>Genre</h3><input type="checkbox" ng-model="genre">
-        <select multiple size="19">
-            <option ng-model="action">action</option>
-            <option ng-model="adventure">adventure</option>
-            <option ng-model="animation">animation</option>
-            <option ng-model="comedy">comedy</option>
-            <option ng-model="crime">crime</option>
-            <option ng-model="documentary">documentary</option>
-            <option ng-model="drama">drama</option>
-            <option ng-model="family">family</option>
-            <option ng-model="fantasy">fantasy</option>
-            <option ng-model="histroy">history</option>
-            <option ng-model="horror">horror</option>
-            <option ng-model="music">music</option>
-            <option ng-model="mystery">mystery</option>
-            <option ng-model="romance">romance</option>
-            <option ng-model="scifi">scifi</option>
-            <option ng-model="tv">tv movie</option>
-            <option ng-model="thriller">thriller</option>
-            <option ng-model="war">war</option>
-            <option ng-model="western">western</option>
+        <h3>Genre</h3><input type="checkbox" ng-click="$ctrl.genres()" ng-model="selection">
+        
+        <select multiple size="19" ng-show="selection">
+            <option ng-repeat="type in $ctrl.genre" value="type.id">{{type.name}}</option> 
         </select>
     </div>
-    <div>
+    <!-- <div>
         <h3>Rating</h3>
         <lable>10</lable><input type="checkbox" ng-model="10">
         <lable>9</lable><input type="checkbox" ng-model="9">
@@ -47,7 +30,7 @@
         <lable>61 - 120</lable><input type="radio">
         <lable>121 - 180</lable><input type="radio">
         <lable>181 +</lable><input type="radio">
-    </div>
+    </div> -->
 </div>
 
 <div>
