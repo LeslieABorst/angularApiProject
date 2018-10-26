@@ -8,3 +8,27 @@ li {
     padding: 5px;
 }
 
+
+.deletelist {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.addlist {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.green {
+    background: lightgreen;
+}
+
+
+
+

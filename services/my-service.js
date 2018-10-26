@@ -6,6 +6,7 @@
 
         service.movieList = [];
         service.genreList = [];
+        service.watchList = [];
           
         service.getData = function(query) {
         
