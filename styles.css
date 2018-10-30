@@ -8,7 +8,6 @@ li {
     padding: 5px;
 }
 
-
 .deletelist {
     width: 30px;
     height: 30px;
@@ -30,5 +29,7 @@ li {
 }
 
 
-
+.cursor {
+    cursor: pointer;
+}
 
