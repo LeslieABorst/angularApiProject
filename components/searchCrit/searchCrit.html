@@ -1,28 +1,30 @@
-<div>
-    <input type="text" placeholder="Search for any movie..." ng-model="$ctrl.searchMovie" ng-change="$ctrl.onInputChange()">
-</div>
 
-<div>
+
+<div class="filter">
     <h2>Filters</h2>
+    <div class="input">
+            <input type="text" placeholder="Search for any movie..." ng-model="$ctrl.searchMovie" ng-change="$ctrl.onInputChange()" style="
+            width: 263px;
+            margin-left: 219px;
+            border: 3px groove;
+            border-color: burlywood;
+            margin-left: 420px
+        ">
+        </div>
     <div class="genre">
         <h3>Genre</h3><input type="checkbox" ng-click="$ctrl.genres()" ng-model="selection"/>
     </div>
     <select multiple size="19" ng-show="selection" ng-model="$ctrl.selectedGenres">
         <option ng-repeat="genre in $ctrl.genres" value="{{genre.id}}" ng-click="$ctrl.filterList(genre.id)">{{genre.name}}</option>
     </select>
-    <!-- <div>
+    <div>
         <h3>Rating</h3>
-        <lable>10</lable><input type="checkbox" ng-model="10">
-        <lable>9</lable><input type="checkbox" ng-model="9">
-        <lable>8</lable><input type="checkbox" ng-model="8">
-        <lable>7</lable><input type="checkbox" ng-model="7">
-        <lable>6</lable><input type="checkbox" ng-model="6">
-        <lable>5</lable><input type="checkbox" ng-model="5">
-        <lable>4</lable><input type="checkbox" ng-model="4">
-        <lable>3</lable><input type="checkbox" ng-model="3">
-        <lable>2</lable><input type="checkbox" ng-model="2">
-        <lable>1 and below</lable><input type="checkbox" ng-model="1">
-    </div>-->
+        
+        <select ng-model="$ctrl.selectedRating" ng-change="$ctrl.getRatings()">
+                <option ng-repeat="rating in $ctrl.ratings">{{rating}}</option>
+            </select>
+       
+    </div>
 </div> 
 
 <movie-list movies="$ctrl.movies"></movie-list>

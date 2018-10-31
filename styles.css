@@ -1,35 +1,108 @@
-ul {
+body{
+    background: rgba(206, 31, 7, 0.726);
+    border: 19px solid rgb(240, 158, 6);
+ }
+ 
+ h1{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    margin-top: -73px;
+    color: white;
+ }
+ h2{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: white;
+ }
+ h3{
+    font-family: 'Abel', sans-serif;
+    text-decoration: underline;
+    color: white;
+ }
+ 
+ ul {
     border-bottom: 2px solid lightgray;
     padding-bottom: 10px;
     list-style: none;
-}
-
-li {
+ }
+ li {
     padding: 5px;
-}
-
-.deletelist {
+ }
+ ul {
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 10px;
+    list-style: none;
+ }
+ 
+ li {
+    padding: 5px;
+ }
+ 
+ .deletelist {
     width: 30px;
     height: 30px;
     padding: 5px;
     float: right;
     cursor: pointer;
-}
-
-.addlist {
+ }
+ 
+ .addlist {
     width: 30px;
     height: 30px;
     padding: 5px;
     float: right;
     cursor: pointer;
-}
-
-.green {
-    background: lightgreen;
-}
-
-
-.cursor {
+ }
+ 
+ .green {
+    background: rgb(163, 233, 130);
+ }
+ 
+ 
+ .cursor {
     cursor: pointer;
-}
+ }
+ .filters{
+    border: 44px solid rgb(248, 170, 3);
+    margin-top: 50px;
+ }
 
+ .genre {
+   display: flex;
+   flex-direction: row;
+    align-items: center;
+ }
+
+ .search{
+    position: sticky;
+    display: inline-block;
+    width: 519px;
+    border: 1px solid lightslategrey;
+    overflow: scroll;
+    margin-top: -42px;
+    margin-left: 170px;
+    background: transparent;
+ }
+ nav{
+ float: none;
+  display: grid;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+ }
+ a:hover {
+    border-bottom: 3px solid rgb(248, 170, 3);
+  }
+ 
+ a.active {
+    border-bottom: 3px solid rgb(248, 170, 3);
+  }
+  div.filter{
+    border-style: inset;
+    border-color: rgb(248, 170, 3);
+    margin-top: 31px;
+    margin-bottom: 127px;
+ }

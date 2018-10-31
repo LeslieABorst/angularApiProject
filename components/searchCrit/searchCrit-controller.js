@@ -5,6 +5,7 @@
             const $ctrl = this;
             $ctrl.movies = MyService.movieList;
             $ctrl.genres = MyService.genreList;
+            $ctrl.ratings = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
         
             $ctrl.onInputChange = function(){
                 MyService.getData($ctrl.searchMovie).then(function(data){
@@ -34,6 +35,19 @@
                     });
                 }
             }
+
+            $ctrl.getRatings = function(){
+                    console.log($ctrl.movies)
+                    $ctrl.movies = [...$ctrl.movies].filter(movie => movie.vote_average <= $ctrl.selectedRating)
+            }
+            // $ctrl.ratings = function() {
+            //     MyService.getRating().then(function(resolve){
+            //         $ctrl.ratings = resolve;
+            //         console.log($ctrl.ratings);
+            //     }).catch(function() {
+
+            //     });
+            // }
 
         });
 }

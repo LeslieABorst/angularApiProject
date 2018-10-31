@@ -7,6 +7,7 @@
         service.movieList = [];
         service.genreList = [];
         service.watchList = [];
+        service.ratingList = [];
           
         service.getData = function(query) {
         
@@ -35,10 +36,6 @@
                         return service.genreList;
                     }
                 });    
-            
-
-    }
-    
-
+        }
     });
 }
