@@ -1,108 +1,191 @@
-body{
-    background: rgba(206, 31, 7, 0.726);
-    border: 19px solid rgb(240, 158, 6);
- }
- 
- h1{
-    font-family: 'Lobster', cursive;
-    text-align: center;
-    margin-top: -73px;
-    color: white;
- }
- h2{
-    font-family: 'Lobster', cursive;
-    text-align: center;
-    color: white;
- }
- h3{
-    font-family: 'Abel', sans-serif;
-    text-decoration: underline;
-    color: white;
- }
- 
- ul {
-    border-bottom: 2px solid lightgray;
-    padding-bottom: 10px;
-    list-style: none;
- }
- li {
-    padding: 5px;
- }
- ul {
-    border-bottom: 2px solid lightgray;
-    padding-bottom: 10px;
-    list-style: none;
- }
- 
- li {
-    padding: 5px;
- }
- 
- .deletelist {
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    float: right;
-    cursor: pointer;
- }
- 
- .addlist {
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    float: right;
-    cursor: pointer;
- }
- 
- .green {
-    background: rgb(163, 233, 130);
- }
- 
- 
- .cursor {
-    cursor: pointer;
- }
- .filters{
-    border: 44px solid rgb(248, 170, 3);
-    margin-top: 50px;
- }
+/*MAIN STYLES*/
+.wrapper {
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  color: rgb(0, 0, 0);
+  background: rgb(58, 147, 231);
+}
 
- .genre {
-   display: flex;
-   flex-direction: row;
-    align-items: center;
- }
+h1, h2, h3 {
+  font-family: 'Lobster', cursive;
+  margin: 1%;
+}
 
- .search{
-    position: sticky;
-    display: inline-block;
-    width: 519px;
-    border: 1px solid lightslategrey;
-    overflow: scroll;
-    margin-top: -42px;
-    margin-left: 170px;
-    background: transparent;
- }
- nav{
- float: none;
-  display: grid;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.side-bar {
+  max-width: 25%;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.button {
+  background: rgb(58, 147, 231);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  margin: 5px;
+  font-size: 1.2em;
+  border-radius: 5px;
   text-decoration: none;
-  font-size: 17px;
-  border-bottom: 3px solid transparent;
- }
- a:hover {
-    border-bottom: 3px solid rgb(248, 170, 3);
-  }
+}
+
+/*HEADER STYLES*/
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+
+.popcorn {
+  width: 150px;
+  height: 150px;
+  margin: 1%;
+  padding: .5%;
+}
+
+.header .nav {
+  padding: .5%;
+}
+
+/*FOOTER STYLES*/
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  padding: 1%;
+}
+
+.tmdblogo {
+  width: 100px;
+  height: auto;
+}
+
+.footer .nav {
+  display: flex;
+  flex-direction: column;
+  padding: .5%;
+  text-align: center;
+}
+
+/*SEARCH AND FILTER CLASSES*/
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/*MOVIE LISTING CLASSES*/
+
+.main {
+  min-width: 700px;
+  max-height: auto;
+  min-height: 382px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin: 1%;
+}
+
+li:first-child {
+  float: left;
+  margin: 1%;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  width: 90%;
+}
+
+/*WATCHLIST CLASSES*/
+
+.deletelist {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  float: right;
+  cursor: pointer;
+}
  
- a.active {
-    border-bottom: 3px solid rgb(248, 170, 3);
-  }
-  div.filter{
-    border-style: inset;
-    border-color: rgb(248, 170, 3);
-    margin-top: 31px;
-    margin-bottom: 127px;
- }
+.addlist {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  float: right;
+  cursor: pointer;
+}
+
+/* visited link */
+.addlist:visited {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background: rgb(163, 233, 130);
+  /* float: right; */
+  cursor: pointer;
+}
+
+/* mouse over link */
+.addlist:hover {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 3px solid rgb(58, 225, 231);
+  /* float: right; */
+  cursor: pointer;
+}
+
+/* selected link */
+.addlist:active {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background: rgb(163, 233, 130);
+  /* float: right; */
+  cursor: pointer;
+}
+
+/* .green {
+  background: rgb(163, 233, 130);
+} */
+ 
+ 
+.cursor {
+  cursor: pointer;
+}

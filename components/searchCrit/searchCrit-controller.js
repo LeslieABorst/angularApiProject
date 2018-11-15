@@ -40,14 +40,7 @@
                     console.log($ctrl.movies)
                     $ctrl.movies = [...$ctrl.movies].filter(movie => movie.vote_average <= $ctrl.selectedRating)
             }
-            // $ctrl.ratings = function() {
-            //     MyService.getRating().then(function(resolve){
-            //         $ctrl.ratings = resolve;
-            //         console.log($ctrl.ratings);
-            //     }).catch(function() {
-
-            //     });
-            // }
+            
 
         });
 }

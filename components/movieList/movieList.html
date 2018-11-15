@@ -1,15 +1,14 @@
-<h1>movie List</h1>
-<div>
-    <ul ng-repeat="movie in $ctrl.movies">
+<div class="main">
+    <h1>movie List</h1>
+    <ul ng-repeat="movie in $ctrl.movies" class="card">
         <li><img src="http://image.tmdb.org/t/p/w154/{{movie.poster_path}}"></li>
         <li>
-            {{movie.original_title}}<img class="addlist" ng-click="$ctrl.addMovie(movie)" ng-class="{green: $ctrl.newMovie}" src="../../images/list.png" alt="Add to My Watch List" title="Add to My Watch List">
+            {{movie.original_title}}<img class="addlist" ng-click="$ctrl.addMovie(movie)" src="../../images/list.png" alt="Add to My Watch List" title="Add to My Watch List">
         </li>
         <li>
             Rating: {{movie.vote_average}} out of 10
         </li>
-        <li class="cursor" ng-click="$ctrl.showDesc()" ng-show="$ctrl.desc" ng-hide="!$ctrl.desc">Overview</li>
-        <li class="cursor" ng-click ="$ctrl.showDesc()" ng-show="!$ctrl.desc" ng-hide="$ctrl.desc">
+        <li>
             Overview: {{movie.overview}}
         </li>
         <li>

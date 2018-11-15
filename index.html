@@ -8,16 +8,15 @@
         <link href="https://fonts.googleapis.com/css?family=Abel%7CLobster" rel="stylesheet">
         <title>AngularJS Services/Factories Practice</title>
     </head>
-    <body>
-        <header>
-                <img src="/images/popcorn.png" alt="logo" style="width:128px;height:128px;margin-left: 141px">
-                <img src="/images/popcorn.png" alt="logo" style="width:128px;height:128px;margin-left: 564px;">
-                 <h1>Movies Galore...</h1>
+    <body class="wrapper">
+        <header class="header">
+                <img class="popcorn" src="/images/popcorn.png" alt="logo" title="popcorn and film logo">
+                 <h1>Movies Galore</h1>
+            <div class="nav">
+                <a class="button" href="#!/">Search</a>
+                <a class="button" href="#!/watchList">Watch List</a>
+            </div>
         </header>
-        <nav>
-            <a class="active" href="#!/">Search</a>
-            <a href="#!/watchList">Watch List</a>
-        </nav>
         <ng-view></ng-view>
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.js"></script>
@@ -31,4 +30,12 @@
         <script src="components/watchList/watchList-controller.js"></script>
         <script src="services/my-service.js"></script>
     </body>
+    <footer class="footer">
+        <div class="nav">
+            <a class="button" href="#!/">Search</a>
+            <a class="button" href="#!/watchList">Watch List</a>
+        </div>
+        <p>Created with <a href="https://www.themoviedb.org/">The Movie DB &copy;</a></p>
+        <a href="https://www.themoviedb.org/"><img class="tmdblogo" src="images/mtdlogo.png" alt="tmdb logo" title="the movie database logo."></a>
+    </footer>
 </html>

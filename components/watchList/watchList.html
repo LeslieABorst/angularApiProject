@@ -1,7 +1,6 @@
-<h2>My Watch List</h2>
-
-<div>
-    <ul ng-repeat="movie in $ctrl.watchList">
+<div class="main">
+    <h2>My Watch List</h2>
+    <ul ng-repeat="movie in $ctrl.watchList" class="card">
         <li><img src="http://image.tmdb.org/t/p/w154/{{movie.poster_path}}"></li>
         <li>
             {{movie.original_title}}<img class="addlist" ng-click="$ctrl.deleteMovie(index)" src="../../images/delete.png" alt="Delete from My Watch List" title="Delete from My Watch List">
